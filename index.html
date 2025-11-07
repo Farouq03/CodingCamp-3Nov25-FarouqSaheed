@@ -18,10 +18,10 @@
 
         <!-- Navigation bar -->
         <nav class = "flex flex-row gap-4 mx-4">
-            <a class = "border border-solid rounded p-2 " href="#home-page">Home</a>
-            <a class = "border border-solid rounded p-2" href="#our-profile-page">Our Profile</a>
-            <a class = "border border-solid rounded p-2" href="#portfolio-page">Portfolio</a>
-            <a class = "border border-solid rounded p-2" href="#message-us-page">Message Us</a>
+            <a class = "border border-solid rounded p-2 bg-black text-white" href="#home-page">Home</a>
+            <a class = "border border-solid rounded p-2 bg-black text-white" href="#my-profile-page">My Profile</a>
+            <a class = "border border-solid rounded p-2 bg-black text-white" href="#portfolio-page">Portfolio</a>
+            <a class = "border border-solid rounded p-2 bg-black text-white" href="#message-us-page">Message Us</a>
         </nav>
 
     </Header>
@@ -29,17 +29,73 @@
     <hr/>
     <!-- Main Content -->
     <main class = "main-content">
-        <section id="home-page" class="min-h-[578px] p-4">
-            <h2 id="welcome-message" class="text-2xl font-bold text-center">Hi Welcome to Website</h2>
+        <section id="home-page" class="min-h-[578px] p-4 text-2xl text-gray-800 text-center font-[Inter]">
+            <h2 id="welcome-message" class="mt-45 font-bold ">Hi Welcome to my Website</h2>
+            <p class="mt-2 text-center">Welcome to my portfolio website.
+Here, you can explore my projects, discover my design and development journey, and see how I turn ideas into real, functional results.
+Feel free to browse through my works and get a closer look at what I create!</p>
         </section>
         <hr/>
 
-        <section id="our-profile-page" class="min-h-[578px] p-4">
-            <h2 class="text-2xl font-bold">My Profile</h2>
+        <section id="my-profile-page" class="min-h-screen flex flex-col md:flex-row items-center justify-center p-8 bg-white gap-10">
+  
+        <div class="flex flex-col items-center justify-center">
+            <img 
+            src="src/photo.jpg" 
+            alt="Profile Picture" 
+            class="rounded-full w-56 h-56 object-cover  border-4 border-gray-200"
+            />
+            <a href="https://www.linkedin.com/in/farouq-saheed-b09942203/">
+            <img src="src\LinkedIn_2021.svg" class="w-30 h-20 mx-10 justify-center mt-4">
+            </a>
+        </div>
+
+    
+        <div class="w-2/3 text-center text-left max-w-2xl">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4 font-[Inter]">
+            My Profile
+            </h2>
+
+            <p class="text-gray-700 text-lg leading-relaxed font-[Inter] mb-4">
+            Hi! im Farouq, Fresh graduate in Electrical Engineering  with strong interest in IoT systems, programming, and creative technology applications. Experienced in collaborative research and student organization projects, including the development of a smart farming system using IoT and an AI-based object detection model. Passionate about technology innovation and motivated to learn new skills.
+            </p>
+
+            <p class="text-gray-700 text-lg leading-relaxed font-[Inter] mb-4">
+            Technical Skills: Python, Arduino, IoT Systems, Microsoft Office, Adobe Photoshop, Premiere Pro, Canva  
+            <br />
+            Soft Skills: Teamwork, Communication, Problem-Solving, Adaptability
+            </p>
+        </div>
         </section>
         <hr/>
-        <section id="portfolio-page" class="min-h-[578px] p-4">
-            <h2 class="text-2xl font-bold">My Portfolio</h2>
+
+        <section id="portfolio-page" class="min-h-[578px] p-4 text-2xl text-gray-800 text-center font-[Inter] flex flex-col ">
+            <div class="w-full p-4 text-center flex flex-col">
+                <h2 class="text-2xl font-bold mb-4">My Portfolio</h2>
+                <p class="mb-4">Here are some of my projects</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border rounded p-4">
+                        <a href="https://github.com/Farouq03/Auto-Stream-Notification--Twitch-to-X-">
+                        <img src="src\xtwitchapi.jpg" alt="Project 1" class="w-full h-60 object-cover mb-2"/>
+                        <h3 class="text-lg font-semibold">Auto Livestream Notification (Twitch to X)</h3>
+                        <p class="text-gray-600">A code to automatically posts tweets on X when you go live on Twitch (using X and Twitch API).</p>
+                        </a>
+                    </div>
+                    <div class="border rounded p-4">
+                        <a href="https://github.com/Farouq03/Objectdetection_Chilli">
+                        <img src="src\B1P10B.jpg" alt="Project 2" class="w-full h-60 object-cover mb-2"/>
+                        <h3 class="text-lg font-semibold">AI Object Detection</h3>
+                        <p class="text-gray-600">A machine learning model for real-time object detection using YOLO.</p>
+                        </a>
+                    </div>
+                    <div class="border rounded p-4">
+                        <a href="https://github.com/Farouq03/CodingCamp-3Nov25-FarouqSaheed">
+                        <img src="src\we are here.png" alt="Project 3" class="w-full h-60 object-cover mb-2"/>
+                        <h3 class="text-lg font-semibold">Personal Website</h3>
+                        <p class="text-gray-600">A portfolio website showcasing my projects and skills.</p>
+                        </a>
+                    </div>
+            </div>
         </section>
         <hr/>
 
@@ -48,7 +104,7 @@
             <h2 class="text-2xl font-bold">Message Us</h2>
             <form class="flex flex-col">
                 <label for="Nama">Nama:</label>
-                <input id="Nama" class="border p-1 rounded" type="text" name="Nama">
+                <input id="Nama" class="border p-1 rounded" type="text" name="Nama" placeholder="Masukan nama anda disini">
 
                 <label class="mt-2" for="Tanggal_lahir">Tanggal Lahir:</label>
                 <input id="Tanggal_lahir" class="border mt-2 p-1 rounded" type="date"  name="Tanggal_lahir">

@@ -2,7 +2,7 @@ welcomeMessage();
 function welcomeMessage() {
     let name = prompt("Please enter your name:");
     if (name != "null" && name != "") {
-        document.getElementById("welcome-message").innerHTML = "Hi " + name + ", Welcome to the Website!";
+        document.getElementById("welcome-message").innerHTML = "Hi " + name + ", Welcome to My Website!";
     }
 }
 
