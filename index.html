@@ -5,33 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
     <link rel="stylesheet" type="text/css " href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
 </head>
 
 <body>
 
     <!-- Header --> 
-    <Header>
+    <Header class = "main-header">
+        <!-- Logo -->
+        <div class="logo"></div>
 
+        <!-- Navigation bar -->
+        <nav class = "flex flex-row gap-4 mx-4">
+            <a class = "border border-solid rounded p-2 " href="#home-page">Home</a>
+            <a class = "border border-solid rounded p-2" href="#our-profile-page">Our Profile</a>
+            <a class = "border border-solid rounded p-2" href="#portfolio-page">Portfolio</a>
+            <a class = "border border-solid rounded p-2" href="#message-us-page">Message Us</a>
+        </nav>
 
     </Header>
 
-
+    <hr/>
     <!-- Main Content -->
-    <main>
+    <main class = "main-content">
+        <section id="home-page" class="min-h-[578px] p-4">
+            <h2 id="welcome-message" class="text-2xl font-bold text-center">Hi Welcome to Website</h2>
+        </section>
+        <hr/>
 
-        <script></script>
+        <section id="our-profile-page" class="min-h-[578px] p-4">
+            <h2 class="text-2xl font-bold">My Profile</h2>
+        </section>
+        <hr/>
+        <section id="portfolio-page" class="min-h-[578px] p-4">
+            <h2 class="text-2xl font-bold">My Portfolio</h2>
+        </section>
+        <hr/>
+
+        <section id="message-us-page" class="min-h-[300px] p-4 flex flex-row gap-10">
+            <div class="w-1/2">
+            <h2 class="text-2xl font-bold">Message Us</h2>
+            <form class="flex flex-col">
+                <label for="Nama">Nama:</label>
+                <input id="Nama" class="border p-1 rounded" type="text" name="Nama">
+
+                <label class="mt-2" for="Tanggal_lahir">Tanggal Lahir:</label>
+                <input id="Tanggal_lahir" class="border mt-2 p-1 rounded" type="date"  name="Tanggal_lahir">
+                <label class="mt-2" for="Jenis_Kelamin">Jenis Kelamin:</label>
+                <div class="flex gap-3">
+                    <input type="radio" name="Jenis_Kelamin" id="Laki-laki" value="Laki-laki">Laki-laki
+                    <input type="radio" name="Jenis_Kelamin" id="Perempuan" value="Perempuan">Perempuan
+                </div>
+
+                <label for="Pesan">Pesan:</label>
+                <textarea id="Pesan" class="border p-1 rounded"  rows="4" cols="50" placeholder=" Masukan pesan anda disini"></textarea>
+
+                <button class="mt-4 border border-solid rounded bg-blue-500 text-white p-2" type="button" onclick="submitForm()">Submit</button>
+            </form>
+            </div>
+
+            <div class="w-1/2 border p-4 rounded bg-gray-50 flex flex-col">
+                <h3 class="text-base font-bold">Submitted Form Data</h3>
+                <p id="submitted-form" class="mt-2">Submitted form data will appear here.</p>
+            </div>
+
+        </section>
+
     </main>
 
 
 
     <!-- Footer -->
+    <hr/>
     <footer>
-
-
+        <p class="footer-page text-center p-4"> 2025 Farouq's Website. All rights reserved.</p>
     </footer>
 
-
+      <!-- Js external file -->
+    <script src="js/script.js"></script>
 
 </body>
 </html>
